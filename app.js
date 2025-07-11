@@ -41,7 +41,12 @@ function addBookToLibrary(bookTitle, bookAuthor, bookPages, readStatus) {
 const bookContainer = document.querySelector("#book-container");
 
 function displayBook() {
-  bookContainer.innerHTML = "";
+  const toRemove = document.querySelectorAll(".bookItem");
+  if (toRemove) {
+    toRemove.forEach((bookObj) => {
+      bookObj.remove();
+    });
+  }
 
   myLibrary.forEach((book) => {
     const bookItem = document.createElement("div");
