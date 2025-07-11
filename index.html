@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <button id="new-open" class="btn">New Book</button>
+      <div class="book-info hidebookinfo">
+        <form id="bookform">
+          <div>
+            <label for="title">Book Title</label>
+            <input class="input" id="title" type="text" />
+          </div>
+          <div>
+            <label for="author">Book Author</label>
+            <input class="input" id="author" type="text" />
+          </div>
+          <div>
+            <label for="pages">Number of pages</label>
+            <input class="input" id="pages" type="number" />
+          </div>
+          <fieldset>
+            <legend>Read status</legend>
+
+            <div>
+              <input
+                type="radio"
+                id="read"
+                name="read-status"
+                value="read"
+                checked
+              />
+              <label for="read">Read</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="not-read"
+                name="read-status"
+                value="not-read"
+              />
+              <label for="not-read">Not Read</label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn">Add Book</button>
+        </form>
+      </div>
+      <div id="book-container"></div>
+    </main>
+  </body>
+</html>
